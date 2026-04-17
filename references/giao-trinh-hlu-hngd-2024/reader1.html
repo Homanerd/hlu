@@ -1,0 +1,130 @@
+
+<html>
+<head><title>
+	Open Library Book Reader
+</title><link id="BRCSS" rel="stylesheet" type="text/css" href="Bookreader/BookReader.css" />
+    <script type="text/javascript" src="Scripts/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="BookReader/jquery-ui-1.8.5.custom.min.js"></script>
+    <script type="text/javascript" src="BookReader/dragscrollable.js"></script>
+    <script type="text/javascript" src="BookReader/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="BookReader/jquery.ui.ipad.js"></script>
+    <script type="text/javascript" src="BookReader/jquery.bt.min.js"></script>
+    <script type="text/javascript" src="BookReader/BookReader.js"></script>
+<link href="App_Themes/KMETSNAVI/main.css" type="text/css" rel="stylesheet" /></head>
+<body style="background-color: #939598;" oncontextmenu="return false;">
+    <div id="BookReader">
+        Internet Archive BookReader Demo
+        <br />
+        <noscript>
+            <p>
+                The BookReader requires JavaScript to be enabled. Please check that your browser
+                supports JavaScript and that it is enabled in the browser settings.
+            </p>
+        </noscript>
+    </div>
+    <script type="text/javascript">
+
+        // 
+        // This file shows the minimum you need to provide to BookReader to display a book
+        //
+        // Copyright(c)2008-2009 Internet Archive. Software license AGPL version 3.
+
+        var BookImages = ["Download.ashx?id=FID1","Download.ashx?id=FID2","Download.ashx?id=FID3","Download.ashx?id=FID4","Download.ashx?id=FID5","Download.ashx?id=FID6","Download.ashx?id=FID7","Download.ashx?id=FID8","Download.ashx?id=FID9","Download.ashx?id=FID10","Download.ashx?id=FID11","Download.ashx?id=FID12","Download.ashx?id=FID13","Download.ashx?id=FID14","Download.ashx?id=FID15","Download.ashx?id=FID16","Download.ashx?id=FID17","Download.ashx?id=FID18","Download.ashx?id=FID19","Download.ashx?id=FID20","Download.ashx?id=FID21","Download.ashx?id=FID22","Download.ashx?id=FID23","Download.ashx?id=FID24","Download.ashx?id=FID25","Download.ashx?id=FID26","Download.ashx?id=FID27","Download.ashx?id=FID28","Download.ashx?id=FID29","Download.ashx?id=FID30","Download.ashx?id=FID31","Download.ashx?id=FID32","Download.ashx?id=FID33","Download.ashx?id=FID34","Download.ashx?id=FID35","Download.ashx?id=FID36","Download.ashx?id=FID37","Download.ashx?id=FID38","Download.ashx?id=FID39","Download.ashx?id=FID40","Download.ashx?id=FID41","Download.ashx?id=FID42","Download.ashx?id=FID43","Download.ashx?id=FID44","Download.ashx?id=FID45","Download.ashx?id=FID46","Download.ashx?id=FID47","Download.ashx?id=FID48","Download.ashx?id=FID49","Download.ashx?id=FID50","Download.ashx?id=FID51","Download.ashx?id=FID52","Download.ashx?id=FID53","Download.ashx?id=FID54","Download.ashx?id=FID55","Download.ashx?id=FID56","Download.ashx?id=FID57","Download.ashx?id=FID58","Download.ashx?id=FID59","Download.ashx?id=FID60","Download.ashx?id=FID61","Download.ashx?id=FID62","Download.ashx?id=FID63","Download.ashx?id=FID64","Download.ashx?id=FID65","Download.ashx?id=FID66","Download.ashx?id=FID67","Download.ashx?id=FID68","Download.ashx?id=FID69","Download.ashx?id=FID70","Download.ashx?id=FID71","Download.ashx?id=FID72","Download.ashx?id=FID73","Download.ashx?id=FID74","Download.ashx?id=FID75","Download.ashx?id=FID76","Download.ashx?id=FID77","Download.ashx?id=FID78","Download.ashx?id=FID79","Download.ashx?id=FID80","Download.ashx?id=FID81","Download.ashx?id=FID82","Download.ashx?id=FID83","Download.ashx?id=FID84","Download.ashx?id=FID85","Download.ashx?id=FID86","Download.ashx?id=FID87","Download.ashx?id=FID88","Download.ashx?id=FID89","Download.ashx?id=FID90","Download.ashx?id=FID91","Download.ashx?id=FID92","Download.ashx?id=FID93","Download.ashx?id=FID94","Download.ashx?id=FID95","Download.ashx?id=FID96","Download.ashx?id=FID97","Download.ashx?id=FID98","Download.ashx?id=FID99","Download.ashx?id=FID100","Download.ashx?id=FID101","Download.ashx?id=FID102","Download.ashx?id=FID103","Download.ashx?id=FID104","Download.ashx?id=FID105","Download.ashx?id=FID106","Download.ashx?id=FID107","Download.ashx?id=FID108","Download.ashx?id=FID109","Download.ashx?id=FID110","Download.ashx?id=FID111","Download.ashx?id=FID112","Download.ashx?id=FID113","Download.ashx?id=FID114","Download.ashx?id=FID115","Download.ashx?id=FID116","Download.ashx?id=FID117","Download.ashx?id=FID118","Download.ashx?id=FID119","Download.ashx?id=FID120","Download.ashx?id=FID121","Download.ashx?id=FID122","Download.ashx?id=FID123","Download.ashx?id=FID124","Download.ashx?id=FID125","Download.ashx?id=FID126","Download.ashx?id=FID127","Download.ashx?id=FID128","Download.ashx?id=FID129","Download.ashx?id=FID130","Download.ashx?id=FID131","Download.ashx?id=FID132","Download.ashx?id=FID133","Download.ashx?id=FID134","Download.ashx?id=FID135","Download.ashx?id=FID136","Download.ashx?id=FID137","Download.ashx?id=FID138","Download.ashx?id=FID139","Download.ashx?id=FID140","Download.ashx?id=FID141","Download.ashx?id=FID142","Download.ashx?id=FID143","Download.ashx?id=FID144","Download.ashx?id=FID145","Download.ashx?id=FID146","Download.ashx?id=FID147","Download.ashx?id=FID148","Download.ashx?id=FID149","Download.ashx?id=FID150","Download.ashx?id=FID151","Download.ashx?id=FID152","Download.ashx?id=FID153","Download.ashx?id=FID154","Download.ashx?id=FID155","Download.ashx?id=FID156","Download.ashx?id=FID157","Download.ashx?id=FID158","Download.ashx?id=FID159","Download.ashx?id=FID160","Download.ashx?id=FID161","Download.ashx?id=FID162","Download.ashx?id=FID163","Download.ashx?id=FID164","Download.ashx?id=FID165","Download.ashx?id=FID166","Download.ashx?id=FID167","Download.ashx?id=FID168","Download.ashx?id=FID169","Download.ashx?id=FID170","Download.ashx?id=FID171","Download.ashx?id=FID172","Download.ashx?id=FID173","Download.ashx?id=FID174","Download.ashx?id=FID175","Download.ashx?id=FID176","Download.ashx?id=FID177","Download.ashx?id=FID178","Download.ashx?id=FID179","Download.ashx?id=FID180","Download.ashx?id=FID181","Download.ashx?id=FID182","Download.ashx?id=FID183","Download.ashx?id=FID184","Download.ashx?id=FID185","Download.ashx?id=FID186","Download.ashx?id=FID187","Download.ashx?id=FID188","Download.ashx?id=FID189","Download.ashx?id=FID190","Download.ashx?id=FID191","Download.ashx?id=FID192","Download.ashx?id=FID193","Download.ashx?id=FID194","Download.ashx?id=FID195","Download.ashx?id=FID196","Download.ashx?id=FID197","Download.ashx?id=FID198","Download.ashx?id=FID199","Download.ashx?id=FID200","Download.ashx?id=FID201","Download.ashx?id=FID202","Download.ashx?id=FID203","Download.ashx?id=FID204","Download.ashx?id=FID205","Download.ashx?id=FID206","Download.ashx?id=FID207","Download.ashx?id=FID208","Download.ashx?id=FID209","Download.ashx?id=FID210","Download.ashx?id=FID211","Download.ashx?id=FID212","Download.ashx?id=FID213","Download.ashx?id=FID214","Download.ashx?id=FID215","Download.ashx?id=FID216","Download.ashx?id=FID217","Download.ashx?id=FID218","Download.ashx?id=FID219","Download.ashx?id=FID220","Download.ashx?id=FID221","Download.ashx?id=FID222","Download.ashx?id=FID223","Download.ashx?id=FID224","Download.ashx?id=FID225","Download.ashx?id=FID226","Download.ashx?id=FID227","Download.ashx?id=FID228","Download.ashx?id=FID229","Download.ashx?id=FID230","Download.ashx?id=FID231","Download.ashx?id=FID232","Download.ashx?id=FID233","Download.ashx?id=FID234","Download.ashx?id=FID235","Download.ashx?id=FID236","Download.ashx?id=FID237","Download.ashx?id=FID238","Download.ashx?id=FID239","Download.ashx?id=FID240","Download.ashx?id=FID241","Download.ashx?id=FID242","Download.ashx?id=FID243","Download.ashx?id=FID244","Download.ashx?id=FID245","Download.ashx?id=FID246","Download.ashx?id=FID247","Download.ashx?id=FID248","Download.ashx?id=FID249","Download.ashx?id=FID250","Download.ashx?id=FID251","Download.ashx?id=FID252","Download.ashx?id=FID253","Download.ashx?id=FID254","Download.ashx?id=FID255","Download.ashx?id=FID256","Download.ashx?id=FID257","Download.ashx?id=FID258","Download.ashx?id=FID259","Download.ashx?id=FID260","Download.ashx?id=FID261","Download.ashx?id=FID262","Download.ashx?id=FID263","Download.ashx?id=FID264","Download.ashx?id=FID265","Download.ashx?id=FID266","Download.ashx?id=FID267","Download.ashx?id=FID268","Download.ashx?id=FID269","Download.ashx?id=FID270","Download.ashx?id=FID271","Download.ashx?id=FID272","Download.ashx?id=FID273","Download.ashx?id=FID274","Download.ashx?id=FID275","Download.ashx?id=FID276","Download.ashx?id=FID277","Download.ashx?id=FID278","Download.ashx?id=FID279","Download.ashx?id=FID280","Download.ashx?id=FID281","Download.ashx?id=FID282","Download.ashx?id=FID283","Download.ashx?id=FID284","Download.ashx?id=FID285","Download.ashx?id=FID286","Download.ashx?id=FID287","Download.ashx?id=FID288","Download.ashx?id=FID289","Download.ashx?id=FID290","Download.ashx?id=FID291","Download.ashx?id=FID292","Download.ashx?id=FID293","Download.ashx?id=FID294","Download.ashx?id=FID295","Download.ashx?id=FID296","Download.ashx?id=FID297","Download.ashx?id=FID298","Download.ashx?id=FID299","Download.ashx?id=FID300","Download.ashx?id=FID301","Download.ashx?id=FID302","Download.ashx?id=FID303","Download.ashx?id=FID304","Download.ashx?id=FID305","Download.ashx?id=FID306","Download.ashx?id=FID307","Download.ashx?id=FID308","Download.ashx?id=FID309","Download.ashx?id=FID310","Download.ashx?id=FID311","Download.ashx?id=FID312","Download.ashx?id=FID313","Download.ashx?id=FID314","Download.ashx?id=FID315","Download.ashx?id=FID316","Download.ashx?id=FID317","Download.ashx?id=FID318","Download.ashx?id=FID319","Download.ashx?id=FID320","Download.ashx?id=FID321","Download.ashx?id=FID322","Download.ashx?id=FID323","Download.ashx?id=FID324","Download.ashx?id=FID325","Download.ashx?id=FID326","Download.ashx?id=FID327","Download.ashx?id=FID328","Download.ashx?id=FID329","Download.ashx?id=FID330","Download.ashx?id=FID331","Download.ashx?id=FID332","Download.ashx?id=FID333","Download.ashx?id=FID334","Download.ashx?id=FID335","Download.ashx?id=FID336","Download.ashx?id=FID337","Download.ashx?id=FID338","Download.ashx?id=FID339","Download.ashx?id=FID340","Download.ashx?id=FID341","Download.ashx?id=FID342","Download.ashx?id=FID343","Download.ashx?id=FID344","Download.ashx?id=FID345","Download.ashx?id=FID346","Download.ashx?id=FID347","Download.ashx?id=FID348","Download.ashx?id=FID349","Download.ashx?id=FID350","Download.ashx?id=FID351","Download.ashx?id=FID352","Download.ashx?id=FID353","Download.ashx?id=FID354","Download.ashx?id=FID355","Download.ashx?id=FID356","Download.ashx?id=FID357","Download.ashx?id=FID358","Download.ashx?id=FID359","Download.ashx?id=FID360","Download.ashx?id=FID361","Download.ashx?id=FID362","Download.ashx?id=FID363","Download.ashx?id=FID364","Download.ashx?id=FID365","Download.ashx?id=FID366","Download.ashx?id=FID367","Download.ashx?id=FID368","Download.ashx?id=FID369","Download.ashx?id=FID370","Download.ashx?id=FID371","Download.ashx?id=FID372","Download.ashx?id=FID373","Download.ashx?id=FID374","Download.ashx?id=FID375","Download.ashx?id=FID376","Download.ashx?id=FID377","Download.ashx?id=FID378","Download.ashx?id=FID379","Download.ashx?id=FID380","Download.ashx?id=FID381","Download.ashx?id=FID382","Download.ashx?id=FID383","Download.ashx?id=FID384","Download.ashx?id=FID385","Download.ashx?id=FID386","Download.ashx?id=FID387","Download.ashx?id=FID388","Download.ashx?id=FID389","Download.ashx?id=FID390","Download.ashx?id=FID391","Download.ashx?id=FID392","Download.ashx?id=FID393","Download.ashx?id=FID394","Download.ashx?id=FID395","Download.ashx?id=FID396","Download.ashx?id=FID397","Download.ashx?id=FID398","Download.ashx?id=FID399","Download.ashx?id=FID400","Download.ashx?id=FID401","Download.ashx?id=FID402","Download.ashx?id=FID403","Download.ashx?id=FID404","Download.ashx?id=FID405","Download.ashx?id=FID406","Download.ashx?id=FID407","Download.ashx?id=FID408","Download.ashx?id=FID409","Download.ashx?id=FID410","Download.ashx?id=FID411","Download.ashx?id=FID412","Download.ashx?id=FID413","Download.ashx?id=FID414","Download.ashx?id=FID415","Download.ashx?id=FID416","Download.ashx?id=FID417","Download.ashx?id=FID418","Download.ashx?id=FID419","Download.ashx?id=FID420","Download.ashx?id=FID421","Download.ashx?id=FID422","Download.ashx?id=FID423","Download.ashx?id=FID424","Download.ashx?id=FID425","Download.ashx?id=FID426","Download.ashx?id=FID427","Download.ashx?id=FID428","Download.ashx?id=FID429","Download.ashx?id=FID430","Download.ashx?id=FID431","Download.ashx?id=FID432","Download.ashx?id=FID433","Download.ashx?id=FID434","Download.ashx?id=FID435","Download.ashx?id=FID436","Download.ashx?id=FID437","Download.ashx?id=FID438","Download.ashx?id=FID439","Download.ashx?id=FID440","Download.ashx?id=FID441","Download.ashx?id=FID442","Download.ashx?id=FID443","Download.ashx?id=FID444","Download.ashx?id=FID445","Download.ashx?id=FID446","Download.ashx?id=FID447","Download.ashx?id=FID448","Download.ashx?id=FID449","Download.ashx?id=FID450","Download.ashx?id=FID451","Download.ashx?id=FID452","Download.ashx?id=FID453","Download.ashx?id=FID454","Download.ashx?id=FID455","Download.ashx?id=FID456","Download.ashx?id=FID457","Download.ashx?id=FID458","Download.ashx?id=FID459","Download.ashx?id=FID460","Download.ashx?id=FID461","Download.ashx?id=FID462","Download.ashx?id=FID463","Download.ashx?id=FID464"];
+
+        // Create the BookReader object
+        br = new BookReader();
+
+        // Return the width of a given page.  Here we assume all images are 800 pixels wide
+        br.getPageWidth = function (index) { return 900; }
+
+        // Return the height of a given page.  Here we assume all images are 1200 pixels high
+        br.getPageHeight = function (index) { return 1200; }
+
+        // We load the images from archive.org -- you can modify this function to retrieve images
+        // using a different URL structure
+        br.getPageURI = function (index, reduce, rotate) {
+            // reduce and rotate are ignored in this simple implementation, but we
+            // could e.g. look at reduce and load images from a different directory
+            // or pass the information to an image server
+//                var leafStr = '000';
+//                var imgStr = (index + 1).toString();
+//                var re = new RegExp("0{" + imgStr.length + "}$");
+//                var url = 'http://kipos.hiendai.com.vn/KIPOSDATA/DigitalCollections/Giaotrinh/DinhNhatMinh/LuanVanDinhNhatMinh_' + leafStr.replace(re, imgStr) + '.jpg';
+            var url = BookImages[index];
+            return url;
+        }
+
+        // Return which side, left or right, that a given page should be displayed on
+        br.getPageSide = function (index) {
+            if (0 == (index & 0x1)) {
+                return 'R';
+            } else {
+                return 'L';
+            }
+        }
+
+        // This function returns the left and right indices for the user-visible
+        // spread that contains the given index.  The return values may be
+        // null if there is no facing page or the index is invalid.
+        br.getSpreadIndices = function (pindex) {
+            var spreadIndices = [null, null];
+            if ('rl' == this.pageProgression) {
+                // Right to Left
+                if (this.getPageSide(pindex) == 'R') {
+                    spreadIndices[1] = pindex;
+                    spreadIndices[0] = pindex + 1;
+                } else {
+                    // Given index was LHS
+                    spreadIndices[0] = pindex;
+                    spreadIndices[1] = pindex - 1;
+                }
+            } else {
+                // Left to right
+                if (this.getPageSide(pindex) == 'L') {
+                    spreadIndices[0] = pindex;
+                    spreadIndices[1] = pindex + 1;
+                } else {
+                    // Given index was RHS
+                    spreadIndices[1] = pindex;
+                    spreadIndices[0] = pindex - 1;
+                }
+            }
+
+            return spreadIndices;
+        }
+
+        // For a given "accessible page index" return the page number in the book.
+        //
+        // For example, index 5 might correspond to "Page 1" if there is front matter such
+        // as a title page and table of contents.
+        br.getPageNum = function (index) {
+            return index + 1;
+        }
+
+        // Total number of leafs
+        br.numLeafs = BookImages.length;
+
+        // Book title and the URL used for the book title link
+        br.bookTitle =''; //'Open Library BookReader Presentation';
+        br.bookUrl ='';//'http://openlibrary.org';
+
+        // Override the path used to find UI images
+        br.imagesBaseURL = '../BookReader/images/';
+
+        br.getEmbedCode = function (frameWidth, frameHeight, viewParams) 
+        {
+            return "Embed code not supported in bookreader demo.";
+        }
+
+        // Let's go!
+        br.init();
+
+        // read-aloud and search need backend compenents and are not supported in the demo
+        $('#BRtoolbar').find('.read').hide();
+        $('#textSrch').hide();
+        $('#btnSrch').hide();
+    
+    </script>
+
+</body>
+</html>

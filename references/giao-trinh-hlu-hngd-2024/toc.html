@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head><title>
+	KIPOS METS NAVIGATOR
+</title><meta name="description" content="KIPOS&#32;METS&#32;NAVIGATOR" /><meta name="keywords" content="HIENDAI&#32;SOFTWARE&#32;COMPANY,&#32;DIGITAL&#32;LIBRARY,&#32;METS" /><meta http-equiv="Refresh" content="1800" /><meta http-equiv="Expires" content="600" /><meta name="author" content="HIENDAI&#32;SOFTWARE&#32;COMPANY,&#32;http://www.hiendai.com.vn" /><meta name="copyright" content="HIENDAI&#32;SOFTWARE&#32;COMPANY,&#32;Hanoi,&#32;Vietnam" />
+
+    <script src="VwdCmsSplitterBar.js" type="text/javascript"></script>
+    <script src="jquery.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+
+<!--
+    function getHeight() {
+        var viewportwidth;
+        var viewportheight;
+
+        // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+
+        if (typeof window.innerWidth != 'undefined') {
+            viewportwidth = window.innerWidth,
+            viewportheight = window.innerHeight
+        }
+
+            // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+
+        else if (typeof document.documentElement != 'undefined'
+            && typeof document.documentElement.clientWidth !=
+            'undefined' && document.documentElement.clientWidth != 0) {
+            viewportwidth = document.documentElement.clientWidth,
+            viewportheight = document.documentElement.clientHeight
+        }
+
+            // older versions of IE
+
+        else {
+            viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
+            viewportheight = document.getElementsByTagName('body')[0].clientHeight
+        }
+
+        return viewportheight;
+    }
+
+
+
+    function getWidth() {
+        var viewportwidth;
+        var viewportheight;
+
+        // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+
+        if (typeof window.innerWidth != 'undefined') {
+            viewportwidth = window.innerWidth,
+          viewportheight = window.innerHeight
+        }
+
+            // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+
+        else if (typeof document.documentElement != 'undefined'
+         && typeof document.documentElement.clientWidth !=
+         'undefined' && document.documentElement.clientWidth != 0) {
+            viewportwidth = document.documentElement.clientWidth,
+           viewportheight = document.documentElement.clientHeight
+        }
+
+            // older versions of IE
+
+        else {
+            viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
+           viewportheight = document.getElementsByTagName('body')[0].clientHeight
+        }
+
+        return viewportwidth;
+    }
+
+
+    var autoSizeText;
+    autoSizeText = function () {
+        //alert("run autoSizeText");
+        var el, elements, _i, _len, _results;
+        //alert("elemets resize select");
+
+        elements = $('.resize');
+        //console.log(elements);
+        //alert("elemets=" + elements.length);
+
+        if (elements.length < 0) {
+            return;
+        }
+        _results = [];
+        for (_i = 0, _len = elements.length; _i < _len; _i++) {
+            el = elements[_i];
+            _results.push((function (el) {
+                var resizeText, _results1;
+                resizeText = function () {
+                    var elNewFontSize;
+                    elNewFontSize = (parseInt($(el).css('font-size').slice(0, -2)) - 1) + 'px';
+                    return $(el).css('font-size', elNewFontSize);
+                };
+                _results1 = [];
+                while (el.scrollHeight > el.offsetHeight) {
+                    _results1.push(resizeText());
+                }
+                return _results1;
+            })(el));
+        }
+        for (_i = 0, _len = elements.length; _i < _len; _i++) {
+            el = elements[_i];
+            $(el).css('display', 'table-cell');
+        }
+        return _results;
+    };
+    //-->
+    </script>
+<link href="App_Themes/KMETSNAVI/main.css" type="text/css" rel="stylesheet" /><style type="text/css">
+	.MetsStructMapTree_0 { font-family:Verdana;Tahoma;font-size:Small;text-decoration:none; }
+	.MetsStructMapTree_1 {  }
+	.MetsStructMapTree_2 {  }
+	.MetsStructMapTree_3 {  }
+	.MetsStructMapTree_4 { background-color:#E0E0E0;border-color:Silver; }
+
+</style></head>
+
+
+
+<body oncontextmenu="return false;">
+    <form name="form1" method="post" action="./TocBookReader.aspx?mets_id=14427&amp;dmd_id=112700&amp;locale=vi-VN" id="form1">
+<div>
+<input type="hidden" name="MetsStructMapTree_ExpandState" id="MetsStructMapTree_ExpandState" value="nnnnnnnnnnnnnnn" />
+<input type="hidden" name="MetsStructMapTree_SelectedNode" id="MetsStructMapTree_SelectedNode" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="MetsStructMapTree_PopulateLog" id="MetsStructMapTree_PopulateLog" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/KMETSNAVI/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZGqFST8guYJJlekZ7LLE3wjC8u271eS4g62i4ou5qXHjQPYSW_OeQWzShOH_6GXnfw2&amp;t=638901793900000000" type="text/javascript"></script>
+
+
+<script src="/KMETSNAVI/WebResource.axd?d=5GcSkSOyaAp9rgkHHDGLy11z8rYG0k3krZ-OR3u0PbWFpFAFLRTlEG3IcGSzBiRfHaK57F-k3z2bTvoyqJgXwg2&amp;t=638901793900000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+    function TreeView_PopulateNodeDoCallBack(context,param) {
+        WebForm_DoCallback(context.data.treeViewID,param,TreeView_ProcessNodeData,context,TreeView_ProcessNodeData,false);
+    }
+var MetsStructMapTree_Data = null;//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="242AB4AE" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="nWaOWbLbOoC6ssBzxrgwXpsLFzqEWft+dWZUm3Ku9eNN7jhHiDn4slAkmUOCsqP9HLhtDa1iz0M63o2S5a1C94sFyEWm4kJWCsHLJDdsm/hMH2MUtiYMTjoyK35jj4ExIGV8ZEQecpPKoW/ULa4M/MIuhMSrgk6EGTYRlpPfET3u/2dgRxL/bOS1Th8k1ksznF3TC1+1vAfs2g8WU9vl0viu0wBk2gZTQBTxhkE5rEuYkY7p2Bvok/RaJcv0GYdHyT2FGLM7dl9T8pRlnry3EdlYh03U98FJfWnE7gCto1crZ/7w5+Ky10lAgOPZEUPqSGa+Vd7FVR3Rzu1SpvVOQndB30Flb7LcIUqSfP6jcJ0C93bRcWUTAAfckDBLmsdfwGmgBM4sMFu9QVNcYDvsyMVzGarq/xxU1DkApL42gTgg8r21SENXGcljiCEGUavn" />
+</div>
+        <div class="mets-option-bar">
+            <table width="100%" cellspacing="2" cellpadding="0" border="0">
+                <tr style="max-height: 34px">
+                    <td width="36px" align="center" valign="middle">
+                        <a href="ThumbNavigator.aspx">
+                            <img src="images/thumbViewTOC.PNG" width='26px' height='24px' alt="Sơ đồ cấu trúc kiểu ảnh đại diện (nếu có)" style="border: 0px" /></a>
+                    </td>
+                    <td width="36px" align="center" valign="middle">
+                        <a href="TocNavigator.aspx">
+                            <img src="images/textViewTOC.PNG" width='26px' height='24px' alt="Sơ đồ cấu trúc kiểu chữ" style="border: 0px" /></a>
+                    </td>
+                    <td width="36px" align="center" valign="middle">
+                        <img src="BookReader/Images/icon_home.PNG" width='26px' height='24px' alt="Open Library Book Reader" style="border: 1px inset" />
+                    </td>
+                    <td align="left" width="100%">
+                        <div id="divmetslabel" class="resize" style="width: 100%; height: 32px;">
+                            Giáo trình Luật Hôn nhân và gia đình Việt Nam / Trường Đại học Luật Hà Nội ; Nguyễn Văn Cừ chủ biên ; Hà Thị Mai Hiên ... [et al.]
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="width: 100%; border: solid 1px #ffffff;">
+            <!--Splitter control declaration-->
+            <div id="vsbSplitter1" OnResizeFunction="splitterOnResize" style="background-image: url(vsplitter.gif); background-position: center center; background-repeat: no-repeat;">
+	<input name="vsbSplitter1$hdnWidth" type="hidden" id="vsbSplitter1_hdnWidth" />
+</div>
+
+            <script language="javascript" type="text/javascript">
+
+                function splitterOnResize(width) {
+                    // do any other work that needs to happen when the 
+                    // splitter resizes. this is a good place to handle 
+                    // any complex resizing rules, etc.
+
+                    // make sure the width is in number format
+                    if (typeof width == "string") {
+                        width = new Number(width.replace("px", ""));
+                    }
+
+                    // now do something...
+                }
+
+            </script>
+
+
+
+            <!--End Splitter control declaration-->
+            <div style="margin: 0px; padding: 0px; width: 100%;">
+                <table id="layout" border="0" cellpadding="0"
+                    cellspacing="1"
+                    style="width: 100%; border: solid 1px #6699CC;">
+                    <tr>
+                        <td id="tdTocTree"
+                            style="width: 210px; height: 100%;"
+                            align="left" valign="top">
+                            <div id="divTocTree"
+                                style="width: 210px; overflow: auto; padding: 0px; margin: 0px; border-bottom-width: thin">
+                                <a href="#MetsStructMapTree_SkipLink"><img alt="Skip&#32;Navigation&#32;Links." src="/KMETSNAVI/WebResource.axd?d=rKN1opQVoh180LaGjXZZkCRCLDM62GMg3vCzJyx-Re79vekJW7E9b4WEBbRfug1pzCGryvzn57OwLd3eSSFuoQ2&amp;t=638901793900000000" width="0" height="0" style="border-width:0px;" /></a><div id="MetsStructMapTree" style="font-family:Verdana;Tahoma;font-size:Small;">
+	<table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=lRwXGPbjjiTWUFPkl8gAAXPwITADzpfTgdg9ZIltFG8uqSgf_4vtSXro61JizVqLj1ApAVQS9XEXIOPa4JR0vc8qYAYsBSLFCfXAxqjSZUo1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s1&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet0&#39;);" id="MetsStructMapTreet0i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s1&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet0&#39;);" id="MetsStructMapTreet0"> Bìa</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s2&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet1&#39;);" id="MetsStructMapTreet1i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s2&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet1&#39;);" id="MetsStructMapTreet1"> Lời giới thiệu</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s3&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet2&#39;);" id="MetsStructMapTreet2i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s3&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet2&#39;);" id="MetsStructMapTreet2"> Mục lục</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s4&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet3&#39;);" id="MetsStructMapTreet3i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s4&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet3&#39;);" id="MetsStructMapTreet3"> Chương 1: Khái niệm và các nguyên tắc cơ bản của Luật Hôn nhân và gia đình Việt Nam</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s5&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet4&#39;);" id="MetsStructMapTreet4i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s5&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet4&#39;);" id="MetsStructMapTreet4"> Chương 2: Quan hệ pháp luật hôn nhân và gia đình</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s6&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet5&#39;);" id="MetsStructMapTreet5i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s6&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet5&#39;);" id="MetsStructMapTreet5"> Chương 3: Sự phát triển của Luật Hôn nhân và gia đình Việt Nam từ Cách mạng tháng Tám năm 1945 đến nay</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s7&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet6&#39;);" id="MetsStructMapTreet6i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s7&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet6&#39;);" id="MetsStructMapTreet6"> Chương 4: Kết hôn</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s8&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet7&#39;);" id="MetsStructMapTreet7i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s8&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet7&#39;);" id="MetsStructMapTreet7"> Chương 5: Quan hệ pháp luật giữa vợ và chồng</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s9&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet8&#39;);" id="MetsStructMapTreet8i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s9&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet8&#39;);" id="MetsStructMapTreet8"> Chương 6: Chế độ tài sản của vợ chồng</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s10&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet9&#39;);" id="MetsStructMapTreet9i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s10&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet9&#39;);" id="MetsStructMapTreet9"> Chương 7: Căn cứ phát sinh quan hệ pháp luật giữa cha mẹ và con</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s11&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet10&#39;);" id="MetsStructMapTreet10i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s11&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet10&#39;);" id="MetsStructMapTreet10"> Chương 8: Quyền và nghĩa vụ giữa cha mẹ và con và giữa các thành viên khác của gia đình</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s12&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet11&#39;);" id="MetsStructMapTreet11i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s12&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet11&#39;);" id="MetsStructMapTreet11"> Chương 9: Quan hệ cấp dưỡng giữa các thành viên gia đình</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s13&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet12&#39;);" id="MetsStructMapTreet12i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s13&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet12&#39;);" id="MetsStructMapTreet12"> Chương 10: Chấm dứt hôn nhân</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s14&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet13&#39;);" id="MetsStructMapTreet13i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s14&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet13&#39;);" id="MetsStructMapTreet13"> Chương 11: Quan hệ hôn nhân và gia đình có yếu tố nước ngoài</a></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><img src="/KMETSNAVI/WebResource.axd?d=OVjaQnj7-BgyIYo-ciQX64efo9qn57dxqcN9StcIanHRusYz86ojMnFrIPYL6IxWHTmU2tGqGM7VYRrLF4MQkd_VeU4WZrgnG6A_zdUDUlQ1&amp;t=638901793900000000" alt="" /></td><td><a href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s15&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet14&#39;);" id="MetsStructMapTreet14i" tabindex="-1"><img src="Images/leaf.gif" alt="" title="" style="border-width:0;" /></a></td><td class="MetsStructMapTree_3" style="white-space:nowrap;"><a class="MetsStructMapTree_0" href="javascript:__doPostBack(&#39;MetsStructMapTree&#39;,&#39;s15&#39;)" onclick="TreeView_SelectNode(MetsStructMapTree_Data,&#32;this,&#39;MetsStructMapTreet14&#39;);" id="MetsStructMapTreet14"> Danh mục tài liệu tham khảo</a></td>
+		</tr>
+	</table>
+</div><a id="MetsStructMapTree_SkipLink"></a>
+                                
+                            </div>
+                        </td>
+                        <td id="tdMidle"
+                            style="width: 6px; background-color: Aqua;">&nbsp;
+                        </td>
+                        <td id="tdDocViewer"
+                            align="left" valign="bottom"
+                            style="width: 100%">
+                            <iframe src="MetsBookReader.aspx?divorder=1" id="docexplorerframe" name="_docexplorerframe" width="100%" frameborder="0" style="border:&#32;0px&#32;solid&#32;#cecece;"></iframe>
+                        </td>
+                    </tr>
+                </table>
+                <script type="text/javascript">
+                    parent.window.document.getElementById('MetsStructMapTree').style.height = (getHeight() - 63) + 'px';
+                    parent.window.document.getElementById('docexplorerframe').style.height = (getHeight() - 63 + 16) + 'px';
+                </script>
+
+            </div>
+        </div>
+        <script type="text/javascript">
+            autoSizeText();
+        </script>
+    
+<script type="text/javascript">
+//<![CDATA[
+var MetsStructMapTree_ImageArray =  new Array('Images/folderClosed.gif', 'Images/folderClosed.gif', 'Images/leaf.gif', '/KMETSNAVI/WebResource.axd?d=Vnw6Nul5Gi8dLBSg8ZsULaZbbI9crYGwnpys98jmLsBJUMKZFvBE0tAnQL6EPj_EYBU6HTIcvkCKnKRW9h0uZAexuqa0y69KrDVEc8SWZ9s1&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=Wt-oJLHV-dsfkxJN06L-WdwJDh9VyVmW59CIcs8oUkHTxPayNuPblEXQBDdsgAWOY8xVvI3iTbOqzJ-ptZ6yNMlRTYlgKAlDN3ak7WMs0PU1&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=-n2KnhPEOy8tY2UhU96Dm7KIOtd4TNp4jwCO0lAPv6ZI_mIMwPlzKT6dQCT1tJxBCSewN2wxxv9jYycHkOkBcYeZg3tCS8a52r1MYNpg9iE1&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=hdmFCDCPe26zjLsJ_I0wGu0d-73jL43EY8XlegNf6b0Jnau-SkMQ1ja7HNsS6FZIw7JlbmkDUFSkA-ZrJOaFMgp1oaK8y7gYNZquN4Y-rik1&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=lRwXGPbjjiTWUFPkl8gAAXPwITADzpfTgdg9ZIltFG8uqSgf_4vtSXro61JizVqLj1ApAVQS9XEXIOPa4JR0vc8qYAYsBSLFCfXAxqjSZUo1&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=dYYs3OPM-Igo6QKCaeiW7tq3iNRS4FfVEd0NBCQa42KvJAmUxsmHHhPFA9LxbhGetSrREj2G1NrEYlbacpCitl8Jpz8SUqYlRMHDYsrc_-Q1&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=lIhYVYeLZitD6XlgNHhEd7Xpj9AAQjzbxcYFIVtCjSsviAjqq_Fw8BKY-BeEpFON76JH94sDl1YK_zYQjnCEvUMOTcZ8l5PRMOg30USXtWeRKr2CmuH0UeQGeBDcZ3130&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=xnKIOFK8_FM0Qhs_8nLkLcJYLPOTNRwBFL6_2bdlXTTR2XrQdcSAGuy0FhZwppJ1LU24z6uZGe4K5PROmOYwwYJc2qZKFH2qZ72stWVyK9U1&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=V4jZQ5INloX8_sbez5sDtPZfSpgZMTk_Nr7WjpcXwbnKqC_jUzddG5-2tP5LXb15Vbq17HvYS9cf69V8828-9RvqXVHgjtsQ5E3KZ7sml_41&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=vG1pKMaqyV2y6301aKyltqcQmrLSBYskrNvjLWZIuk5KjFgPsLZcBn2AlYa6y_HiFYhMZhvQrV5rhFNf1brC4ia2KSFGA5rSDrENqiL1fJkdyhWMyeyETJNLN1oU9UCF0&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=OVjaQnj7-BgyIYo-ciQX64efo9qn57dxqcN9StcIanHRusYz86ojMnFrIPYL6IxWHTmU2tGqGM7VYRrLF4MQkd_VeU4WZrgnG6A_zdUDUlQ1&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=JjqRUslgykaviJSn3n-H3CpSoW0KBcMc3-Km-e52dfAVKFAQTnlfqQtCAuQz5NCzr-SaPIKi31D5zq46ABlby6hyq4AQq_qWcjR3-exLjk81&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=5j1V7IJBhc-qdmzmrXloblQx9CcWiXZ0Gt5qaoZ97Zq1IaJtFi2vMRNUYY8eIez0iwu4JvQmtRLez3YbiQA7IyNyNPUguzvR0Jjup95DWL--OTYtjmIV3X8rJxPaS8WH0&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=0I2_S9yc7nkxUxvytX7_gR8e1WX9G5ewHuK1snwWoZYT9sj-_IByDe0G7NPYTkWJreoiN5iP4cyvsIY4eju-ZnKYm6XGREr4VvVRxEvAXAc1&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=Sqbgc07c7mewWSa--TDOw3FJftUkCXcVrIBgOWWVZaCBcXt2HsAnM609kV17dXk2PxXy9J1FeP2qVnmMIDAbrChToFnNjqG-3OBCw7gfe9OW3gkxAE39jdAz0-V788YY0&t=638901793900000000', '/KMETSNAVI/WebResource.axd?d=vpWuO4m6Yh6bn9CLkjMiDoq_yOERdVYYU8PPkToTTleNH0gB46dfW9NCw9Frs1B-sdjhv9D5VViqg_GSaH9f4e2nwJw9JNQiKN-mWxvFG5FjRdyB11V7-RXRLnxkmmvv0&t=638901793900000000');
+//]]>
+</script>
+
+<script type="text/javascript"> <!-- 
+var sbar_vsbSplitter1= VwdCmsSplitterBar.createNew("vsbSplitter1", null);
+sbar_vsbSplitter1.leftResizeTargetIds = "tdTocTree;divTocTree";
+sbar_vsbSplitter1.rightResizeTargetIds = "";
+sbar_vsbSplitter1.iframeHiding = "UseVisibility";
+sbar_vsbSplitter1.SetBackgroundColor("lightsteelblue");
+sbar_vsbSplitter1.backgroundColorHilite = "steelblue";
+sbar_vsbSplitter1.backgroundColorResizing = "purple";
+sbar_vsbSplitter1.backgroundColorLimit = "firebrick";
+sbar_vsbSplitter1.configure();
+// -->
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/KMETSNAVI/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdUVrZ5B4EkMXk8U0c8L1hV5ABkXKBk29vqEXJhExRBEtFpZnLrpHXQhiWQSwoCMriw2&t=638901793900000000';
+WebForm_InitCallback();var MetsStructMapTree_Data = new Object();
+MetsStructMapTree_Data.images = MetsStructMapTree_ImageArray;
+MetsStructMapTree_Data.collapseToolTip = "Collapse {0}";
+MetsStructMapTree_Data.expandToolTip = "Expand {0}";
+MetsStructMapTree_Data.expandState = theForm.elements['MetsStructMapTree_ExpandState'];
+MetsStructMapTree_Data.selectedNodeID = theForm.elements['MetsStructMapTree_SelectedNode'];
+MetsStructMapTree_Data.selectedClass = 'MetsStructMapTree_4 ';
+MetsStructMapTree_Data.selectedHyperLinkClass = '';
+(function() {
+  for (var i=0;i<19;i++) {
+  var preLoad = new Image();
+  if (MetsStructMapTree_ImageArray[i].length > 0)
+    preLoad.src = MetsStructMapTree_ImageArray[i];
+  }
+})();
+MetsStructMapTree_Data.lastIndex = 15;
+MetsStructMapTree_Data.populateLog = theForm.elements['MetsStructMapTree_PopulateLog'];
+MetsStructMapTree_Data.treeViewID = 'MetsStructMapTree';
+MetsStructMapTree_Data.name = 'MetsStructMapTree_Data';
+//]]>
+</script>
+</form>
+
+
+</body>
+</html>

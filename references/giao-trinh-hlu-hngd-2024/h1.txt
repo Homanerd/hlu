@@ -1,0 +1,10 @@
+HTTP/2 302 
+cache-control: private
+content-type: text/HTML; charset=utf-8
+location: https://thuvien.hlu.edu.vn/KIPOSDATA2/GiaoTrinh/2024/GTLuatHonNhanVaGiaDinhVietNam/GTLuatHonNhanVaGiaDinhVietNam_Page001.jpg
+server: Microsoft-IIS/10.0
+x-powered-by: ASP.NET
+strict-transport-security: max-age=31536000; preload
+x-content-type-options: nosniff
+date: Tue, 07 Apr 2026 18:52:40 GMT
+
