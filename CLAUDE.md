@@ -3,105 +3,142 @@
 ## Thông tin chung
 
 - **Trường**: Đại học Luật Hà Nội (HLU)
-- **Đề tài**: Đăng ký kết hôn theo pháp luật hiện hành
+- **Sinh viên**: Nguyễn Quang Linh — K22FCQ075
+- **GVHD**: TS. Bùi Thị Mừng
+- **Đề tài**: ĐĂNG KÝ KẾT HÔN THEO PHÁP LUẬT VIỆT NAM HIỆN HÀNH
 - **Lĩnh vực**: Luật Hôn nhân và Gia đình
 - **Ngôn ngữ**: Tiếng Việt
-- **Cấu trúc**: 2 chương (đề cương giảng viên duyệt 03/2026)
+- **Cấu trúc**: 2 chương + Mở đầu (7 mục) + Kết luận + TLTK
 
-## Dàn bài (2 chương — giảng viên đã sửa)
+## ⚠️ Trạng thái hiện tại (cập nhật 29/04/2026)
 
-```
-MỞ ĐẦU
-  1. Lý do chọn đề tài
-  2. Mục đích và nhiệm vụ nghiên cứu
-  3. Đối tượng và phạm vi nghiên cứu
-  4. Phương pháp nghiên cứu
-  5. Ý nghĩa lý luận và thực tiễn của đề tài
-  6. Kết cấu của khóa luận
-
-CHƯƠNG 1: LÝ LUẬN VÀ PHÁP LUẬT VỀ ĐĂNG KÝ KẾT HÔN
-  1.1. Một số vấn đề lý luận cơ bản về đăng ký kết hôn
-    1.1.1. Khái niệm kết hôn và đăng ký kết hôn
-    1.1.2. Ý nghĩa của việc đăng ký kết hôn
-  1.2. Nội dung quy định PL HN&GĐ hiện hành về ĐKKH
-    1.2.1. Thẩm quyền đăng ký kết hôn
-    1.2.2. Trình tự, thủ tục đăng ký kết hôn
-    1.2.3. Xử lý vi phạm pháp luật về đăng ký kết hôn
-  Kết luận chương 1
-
-CHƯƠNG 2: THỰC TIỄN THỰC HIỆN PL VỀ ĐKKH VÀ MỘT SỐ KIẾN NGHỊ
-  2.1. Thực tiễn thực hiện pháp luật về đăng ký kết hôn
-    2.1.1. Những kết quả đạt được
-    2.1.2. Tồn tại, vướng mắc (7 mục)
-    2.1.3. Nguyên nhân (khách quan + chủ quan)
-  2.2. Một số kiến nghị hoàn thiện PL, nâng cao hiệu quả
-    2.2.1. Kiến nghị hoàn thiện pháp luật
-    2.2.2. Kiến nghị khác
-  Kết luận chương 2
-
-KẾT LUẬN
-DANH MỤC TÀI LIỆU THAM KHẢO
-```
+- [x] Bản nộp GVHD lần 1 — `final_thesis/NguyenQuangLinh_KLTN_DangKyKetHon.pdf` (64 trang)
+- [x] **Đang sửa theo feedback GVHD** — file công tác là `thesis/khoa-luan-tot-nghiep-sua-1.md`
+- [x] Bản gốc đã sync với PDF nộp lần 1 — `thesis/khoa-luan-tot-nghiep.md`
+- [ ] Chờ GVHD duyệt bản sửa-1 → tiếp tục sửa hoặc convert PDF nộp chính thức
 
 ## File structure
 
 ```
 HLU/
-├── CLAUDE.md                    ← File này
+├── CLAUDE.md                                 ← File này (context cho AI)
+├── final_thesis/
+│   └── NguyenQuangLinh_KLTN_DangKyKetHon.pdf ← Bản nộp GVHD lần 1
 ├── thesis/
-│   ├── OUTLINE.md               ← Dàn bài 2 chương (giảng viên duyệt 03/2026)
-│   └── khoa-luan-tot-nghiep.md  ← Toàn bộ nội dung khóa luận (single file)
+│   ├── khoa-luan-tot-nghiep.md               ← Bản đã sync với PDF nộp 1
+│   └── khoa-luan-tot-nghiep-sua-1.md         ← BẢN ĐANG SỬA (markup ✏️ + <mark>)
 ├── research/
-│   ├── 52_2014_QH13_m_238640.pdf  ← Luật HN&GĐ 2014 (PDF gốc)
-│   └── van-ban-phap-luat.md       ← Tổng hợp & trích dẫn nguyên văn
-├── references/
-│   └── Khóa luận tốt nghiệp - Trịnh Thị Hường.doc.pdf  ← Mẫu tham khảo
-└── notes/
-    └── ideas.md
+│   └── van-ban-phap-luat/
+│       ├── 52_2014_QH13_m_238640.pdf         ← Luật HN&GĐ 2014
+│       ├── 60_2014_QH13_m_259727.pdf         ← Luật Hộ tịch 2014
+│       ├── 120_2025_ND-CP_m_660588.pdf       ← NĐ 120/2025/NĐ-CP
+│       ├── du-thao-luat-ho-tich-2026-ban-trinh-qh.pdf ← Luật HT (sửa đổi) 2026
+│       └── chế-định-kết-hôn-trong-Luật-HNGĐ-vấn-đề-lý-luận-và-thực-tiễn-ts-1.pdf
+└── references/
+    └── dang-ky-ket-hon-mai-hai-linh/         ← Khóa luận MHL (HLU 2024) tham khảo
 ```
 
-## Văn bản pháp luật chính
+## Cấu trúc khóa luận hiện tại (sau khi xử lý feedback)
 
-1. **Luật HN&GĐ 2014** (52/2014/QH13) — 9 chương, 133 điều. Trọng tâm: Chương II (Đ.8-16 Kết hôn), Chương VIII (Đ.121-133 YTNN)
-2. **Luật Hộ tịch 2014** (60/2014/QH13) — Đ.17-18 (thẩm quyền, thủ tục ĐKKH), Đ.37-38 (có YTNN)
-3. **NĐ 123/2015/NĐ-CP** — Hướng dẫn Luật Hộ tịch (hồ sơ, trình tự, đăng ký lại)
-4. **NĐ 19/2024/NĐ-CP** — Sửa đổi NĐ 123 (rút ngắn thời hạn, đơn giản hóa)
-5. **TT 04/2020/TT-BTP** — Mẫu tờ khai, GCNKH, sổ đăng ký
-6. **BLDS 2015** (91/2015/QH13) — Đ.22-24 (năng lực hành vi dân sự)
+```
+MỞ ĐẦU
+  1. Lý do chọn đề tài
+  2. ✏️ Tình hình nghiên cứu                  ← THÊM MỚI theo feedback GVHD
+  3. ✏️ Mục đích và nhiệm vụ nghiên cứu        ← (cũ là mục 2)
+  4. ✏️ Đối tượng và phạm vi nghiên cứu        ← (cũ là mục 3)
+  5. ✏️ Phương pháp nghiên cứu                 ← (cũ là mục 4)
+  6. ✏️ Ý nghĩa lý luận và thực tiễn của đề tài
+  7. ✏️ Kết cấu của khóa luận
 
-## Điều luật trọng tâm (trích từ PDF)
+CHƯƠNG 1: LÝ LUẬN VÀ PHÁP LUẬT VỀ ĐĂNG KÝ KẾT HÔN
+  1.1. Một số vấn đề lý luận cơ bản về ĐKKH
+    1.1.1. Khái niệm kết hôn và đăng ký kết hôn
+      1.1.1.1. Khái niệm kết hôn (✏️ đã thêm khái niệm rõ ràng từ Từ điển HLU + Luật HN&GĐ 2000/2014)
+      1.1.1.2. ✏️ Khái niệm đăng ký kết hôn (đã mở rộng từ ~150 từ → ~1.500 từ)
+    1.1.2. Ý nghĩa của việc ĐKKH
+  1.2. Nội dung quy định của PL HN&GĐ hiện hành về ĐKKH
+    1.2.1. ✏️ Thẩm quyền ĐKKH (đã restructure từ "giai đoạn" → phân tích theo văn bản PL)
+      1.2.1.1. Đối với việc kết hôn trong nước
+      1.2.1.2. ✏️ Đối với việc kết hôn có YTNN
+    1.2.2. ✏️ Trình tự, thủ tục ĐKKH (cùng cách restructure)
+      1.2.2.1. Đối với việc kết hôn trong nước
+      1.2.2.2. ✏️ Đối với việc kết hôn có YTNN
+    1.2.3. Xử lý vi phạm pháp luật về ĐKKH
 
-- **Đ.3 K.5**: Kết hôn = nam nữ xác lập quan hệ vợ chồng theo điều kiện KH + ĐKKH
-- **Đ.5 K.2**: Các hành vi bị cấm (giả tạo, tảo hôn, cưỡng ép, cùng huyết thống...)
-- **Đ.8**: Điều kiện KH (nam đủ 20, nữ đủ 18, tự nguyện, không mất NLHVDS, không thuộc trường hợp cấm)
-- **Đ.8 K.2**: Nhà nước không thừa nhận hôn nhân đồng giới
-- **Đ.9**: ĐKKH bắt buộc, không đăng ký = không có giá trị pháp lý
-- **Đ.10-12**: Hủy kết hôn trái PL (ai yêu cầu, xử lý, hậu quả)
-- **Đ.14**: Chung sống không ĐKKH → không phát sinh quyền nghĩa vụ vợ chồng
+CHƯƠNG 2: THỰC TIỄN THỰC HIỆN PL VỀ ĐKKH VÀ MỘT SỐ KIẾN NGHỊ
+  2.1. Thực tiễn thực hiện pháp luật
+    2.1.1. Kết quả đạt được
+    2.1.2. Tồn tại, vướng mắc (gồm ✏️ tiểu mục mới về vướng mắc sáp nhập đơn vị hành chính)
+    2.1.3. Nguyên nhân
+  2.2. Kiến nghị
+```
 
-## Nguyên tắc làm việc
+## 📋 Marker convention (cho bản sửa-1)
 
-- Trích dẫn điều khoản cụ thể khi đề cập văn bản pháp luật
-- Phân tích phải có ví dụ thực tiễn / vụ việc minh họa
-- Đối chiếu pháp luật Việt Nam với pháp luật quốc tế khi cần
-- Mỗi chương kết thúc bằng **Tiểu kết**
-- Format: Markdown → convert sang Word/PDF sau
+- **`✏️`** — đánh dấu các section đã sửa (header, đoạn mở đầu)
+- **`<mark>...</mark>`** — wrap nội dung đã sửa để render highlight vàng (VS Code Preview, GitHub)
+- **`> ✏️ **[ĐÃ SỬA THEO FEEDBACK GVHD]** ...`** — blockquote tóm tắt thay đổi tại đầu mỗi section
 
-## Trạng thái hiện tại
+## 📚 Văn bản pháp luật chính (CẬP NHẬT)
 
-- [x] Dàn bài 2 chương (OUTLINE.md) — giảng viên duyệt 03/2026
-- [x] Nghiên cứu Luật HN&GĐ 2014 từ PDF gốc
-- [x] Nghiên cứu khóa luận tham khảo (Trịnh Thị Hường)
-- [x] Viết toàn bộ khóa luận theo outline 2 chương mới
-- [x] Bổ sung số liệu thực tế (Bộ Tư pháp, TĐT 2019, Ủy ban Dân tộc)
-- [x] Bổ sung 30 tài liệu tham khảo (bao gồm nguồn internet)
-- [ ] Rà soát, chỉnh sửa tổng thể
-- [ ] Convert sang Word/PDF
+1. **Luật HN&GĐ 2014** (52/2014/QH13) — Đ.3 K.5 (định nghĩa kết hôn), Đ.8 (điều kiện), Đ.9 (đăng ký bắt buộc)
+2. **Luật Hộ tịch 2014** (60/2014/QH13) — Đ.17 (thẩm quyền trong nước), Đ.37 (có YTNN)
+3. **NĐ 123/2015/NĐ-CP** — Hướng dẫn Luật Hộ tịch
+4. **NĐ 07/2025/NĐ-CP** (09/01/2025) — **Bãi bỏ yêu cầu Giấy xác nhận tình trạng hôn nhân** với ĐKKH trong nước
+5. **Luật Tổ chức chính quyền địa phương 72/2025/QH15** (16/6/2025) — Bỏ cấp huyện, sang mô hình 2 cấp
+6. **NĐ 120/2025/NĐ-CP** (hiệu lực 01/7/2025) — Chuyển giao thẩm quyền ĐKKH có YTNN từ cấp huyện → cấp xã; cá nhân được lựa chọn nơi đăng ký
+7. **🆕 Luật Hộ tịch (sửa đổi) năm 2026** — Quốc hội khóa XVI thông qua 23/4/2026 (488/492 ĐB tán thành, 97,60%), **hiệu lực 01/3/2027**, thay thế Luật Hộ tịch 2014. Điểm mới: Đ.8 (đăng ký không phụ thuộc nơi cư trú), Đ.16 (UBND cấp xã có thẩm quyền cho cả ĐKKH có YTNN)
+8. **BLDS 2015** — Đ.40 (nơi cư trú)
+9. **BLTTDS 2015** — Đ.91 (giá trị chứng cứ của GCNKH)
 
-## Số liệu đã tích hợp
+## 🎯 Lịch sử feedback GVHD đã xử lý
 
-- 2 triệu+ ĐKKH giai đoạn 2021-2023; 734.900 trường hợp năm 2023
-- Tảo hôn 21,9% trong DTTS (Mông 51,5%, Ê Đê 38,2%)
-- ĐKKH có YTNN: 2.000 (2021) → 19.000 (2023); 89,1% phụ nữ VN
-- Top quốc gia: Đài Loan 21,4%, Mỹ 19,9%, Hàn Quốc 18,1%, TQ 17,6%
+### Feedback đợt 1 (đầu 4/2026)
+- ✅ Sync file md với bản PDF GVHD đã duyệt
+- ✅ Thống nhất chữ viết tắt (UBND, GCNKH, YTNN, DTTS, ĐKKH, HN&GĐ)
+- ✅ Restructure 1.2.1 và 1.2.2 từ kiểu "giai đoạn lịch sử" sang phân tích theo từng văn bản PL
+- ✅ Tăng cường chương 2 về vướng mắc sáp nhập đơn vị hành chính
+- ✅ Tăng cường trích dẫn + bổ sung TLTK
+- ✅ Khắc phục lỗi kỹ thuật (typo, format)
+
+### Feedback đợt 2
+- ✅ Bổ sung mục 2 "Tình hình nghiên cứu" — chỉ giữ tài liệu thực sự dùng (Luận án TS Bùi Thị Mừng + Khóa luận Mai Hải Linh + Giáo trình HLU + Báo cáo Cục Thống kê + Điều tra 53 DTTS); renumber các mục Mở đầu
+
+### Feedback đợt 3 (1.1.1.1 Khái niệm kết hôn)
+- ✅ "Sau khi phân tích phải đưa ra khái niệm" — đã bổ sung đoạn rút khái niệm từ Từ điển HLU + Luật HN&GĐ 2000/2014 (theo cách MHL làm)
+
+### Feedback đợt 4 (1.1.1.2 Khái niệm ĐKKH)
+- ✅ "Toàn bộ nội dung viết sơ sài, khái niệm chưa có. Bổ sung phân tích để đưa ra khái niệm. Dài thêm." — đã mở rộng từ ~150 từ → ~1.500 từ, dẫn 5 nguồn (Luật HN&GĐ 2014, Luật Hộ tịch 2014, Luật HT sửa đổi 2026, Từ điển Tiếng Việt, Từ điển HLU), khái niệm bold-italic ở câu kết
+
+## 📐 Style guide (kế thừa từ Mai Hải Linh — HLU 2024)
+
+- Văn xuôi liên tục, không bullet list ở phần khái niệm
+- Liệt kê công trình theo dạng: *"Đề tài luận án... của tác giả X đã đi sâu phân tích..."*
+- Khái niệm rút ra ở câu kết của section: *"Như vậy, [khái niệm]..."*
+- Khi đưa ra khái niệm: dẫn 3 nguồn (Từ điển giải thích thuật ngữ Luật học HLU + Luật HN&GĐ 2000 + 2014) thay vì tự bịa
+- Phân tích yếu tố cấu thành (2 hoặc 3 yếu tố) sau khi nêu khái niệm
+
+## ⚠️ Lưu ý khi tiếp tục công việc
+
+1. **File đang công tác:** `thesis/khoa-luan-tot-nghiep-sua-1.md` (KHÔNG sửa file gốc `khoa-luan-tot-nghiep.md`)
+2. **Marker convention:** mọi thay đổi mới phải đánh dấu `✏️` + wrap `<mark>` để GVHD dễ review
+3. **Trước khi đề xuất khái niệm:** PHẢI dẫn nguồn (Từ điển HLU + Luật HN&GĐ + …) — KHÔNG tự bịa khái niệm
+4. **Cập nhật Luật Hộ tịch (sửa đổi) 2026** ở mọi chỗ có thể (đã thông qua 23/4/2026, hiệu lực 01/3/2027)
+5. **Sáp nhập đơn vị hành chính** (cấp tỉnh 63→34, cấp xã 10.035→3.321, hiệu lực 01/7/2025) — bối cảnh thực tiễn quan trọng
+
+## Số liệu thực tế đã tích hợp
+
+- 2 triệu+ ĐKKH giai đoạn 2021–2023; 734.900 trường hợp năm 2023
+- 1.890.488 cặp ĐKKH mới giai đoạn 2021–2023, tỷ lệ kết hôn lần đầu 85,58%
+- Tảo hôn 21,9% trong DTTS (Mông 51,5%, Cơ Lao 47,8%, Mảng 47,2%, Xinh Mun 44,8%)
+- ĐKKH có YTNN: 2.000 (2021) → 19.000 (2023); 89,1% là phụ nữ VN
+- Top quốc gia đối tác: Đài Loan 21,4%, Mỹ 19,9%, Hàn Quốc 18,1%, TQ 17,6%
 - 3 triệu+ sổ hộ tịch, 100 triệu+ bản ghi đang số hóa (Đề án 06)
+- Sáp nhập đơn vị HC: cấp tỉnh 63→34, cấp xã 10.035→3.321 (gần 67% sáp nhập)
+
+## Git workflow
+
+- Repo: `https://github.com/Homanerd/hlu.git`
+- Branch: `main`
+- File giáo trình PDF lớn (688MB) đã được loại khỏi history (commit `3dfed4b` thêm `.gitignore`)
+- Commit mỗi đợt sửa lớn — message format: tiếng Việt, mô tả ngắn gọn thay đổi
