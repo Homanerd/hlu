@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+Server: Microsoft-IIS/10.0
+Set-Cookie: locale=vi; domain=thuvien.hlu.edu.vn; expires=Tue, 04-May-2027 05:37:18 GMT; path=/
+X-Powered-By: ASP.NET
+Strict-Transport-Security: max-age=31536000; preload
+X-Content-Type-Options: nosniff
+Date: Mon, 04 May 2026 05:37:18 GMT
+Content-Length: 6895
+

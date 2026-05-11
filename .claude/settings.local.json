@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker start my-openclaw)",
+      "Bash(git clone \"https://oauth2:glpat-oy392q0HGy9cQ9jwysLpXm86MQp1OmNzZ2l6Cw.01.12005hrf7@gitlab.com/avada/avada-image-optimizer.git\" \"/Users/hooman/Vibe working/Openclaw/products/ap-speed-optimizer/source/avada-image-optimizer\")",
+      "mcp__figma-desktop__get_screenshot",
+      "mcp__figma-remote-mcp__use_figma"
+    ]
+  }
+  ,
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://falconclaudeproxy.duckdns.org",
+    "ANTHROPIC_AUTH_TOKEN": "***REMOVED***"
+  }
+}

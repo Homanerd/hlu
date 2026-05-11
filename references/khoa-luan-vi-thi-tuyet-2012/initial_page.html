@@ -1,0 +1,130 @@
+
+<html>
+<head><title>
+	Open Library Book Reader
+</title><link id="BRCSS" rel="stylesheet" type="text/css" href="Bookreader/BookReader.css" />
+    <script type="text/javascript" src="Scripts/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="BookReader/jquery-ui-1.8.5.custom.min.js"></script>
+    <script type="text/javascript" src="BookReader/dragscrollable.js"></script>
+    <script type="text/javascript" src="BookReader/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="BookReader/jquery.ui.ipad.js"></script>
+    <script type="text/javascript" src="BookReader/jquery.bt.min.js"></script>
+    <script type="text/javascript" src="BookReader/BookReader.js"></script>
+<link href="App_Themes/KMETSNAVI/main.css" type="text/css" rel="stylesheet" /></head>
+<body style="background-color: #939598;" oncontextmenu="return false;">
+    <div id="BookReader">
+        Internet Archive BookReader Demo
+        <br />
+        <noscript>
+            <p>
+                The BookReader requires JavaScript to be enabled. Please check that your browser
+                supports JavaScript and that it is enabled in the browser settings.
+            </p>
+        </noscript>
+    </div>
+    <script type="text/javascript">
+
+        // 
+        // This file shows the minimum you need to provide to BookReader to display a book
+        //
+        // Copyright(c)2008-2009 Internet Archive. Software license AGPL version 3.
+
+        var BookImages = ["Download.ashx?id=FID1","Download.ashx?id=FID2","Download.ashx?id=FID3","Download.ashx?id=FID4","Download.ashx?id=FID5","Download.ashx?id=FID6","Download.ashx?id=FID7","Download.ashx?id=FID8","Download.ashx?id=FID9","Download.ashx?id=FID10","Download.ashx?id=FID11","Download.ashx?id=FID12","Download.ashx?id=FID13","Download.ashx?id=FID14","Download.ashx?id=FID15","Download.ashx?id=FID16","Download.ashx?id=FID17","Download.ashx?id=FID18","Download.ashx?id=FID19","Download.ashx?id=FID20","Download.ashx?id=FID21","Download.ashx?id=FID22","Download.ashx?id=FID23","Download.ashx?id=FID24","Download.ashx?id=FID25","Download.ashx?id=FID26","Download.ashx?id=FID27","Download.ashx?id=FID28","Download.ashx?id=FID29","Download.ashx?id=FID30","Download.ashx?id=FID31","Download.ashx?id=FID32","Download.ashx?id=FID33","Download.ashx?id=FID34","Download.ashx?id=FID35","Download.ashx?id=FID36","Download.ashx?id=FID37","Download.ashx?id=FID38","Download.ashx?id=FID39","Download.ashx?id=FID40","Download.ashx?id=FID41","Download.ashx?id=FID42","Download.ashx?id=FID43","Download.ashx?id=FID44","Download.ashx?id=FID45","Download.ashx?id=FID46","Download.ashx?id=FID47","Download.ashx?id=FID48","Download.ashx?id=FID49","Download.ashx?id=FID50","Download.ashx?id=FID51","Download.ashx?id=FID52","Download.ashx?id=FID53","Download.ashx?id=FID54","Download.ashx?id=FID55","Download.ashx?id=FID56","Download.ashx?id=FID57","Download.ashx?id=FID58","Download.ashx?id=FID59","Download.ashx?id=FID60"];
+
+        // Create the BookReader object
+        br = new BookReader();
+
+        // Return the width of a given page.  Here we assume all images are 800 pixels wide
+        br.getPageWidth = function (index) { return 900; }
+
+        // Return the height of a given page.  Here we assume all images are 1200 pixels high
+        br.getPageHeight = function (index) { return 1200; }
+
+        // We load the images from archive.org -- you can modify this function to retrieve images
+        // using a different URL structure
+        br.getPageURI = function (index, reduce, rotate) {
+            // reduce and rotate are ignored in this simple implementation, but we
+            // could e.g. look at reduce and load images from a different directory
+            // or pass the information to an image server
+//                var leafStr = '000';
+//                var imgStr = (index + 1).toString();
+//                var re = new RegExp("0{" + imgStr.length + "}$");
+//                var url = 'http://kipos.hiendai.com.vn/KIPOSDATA/DigitalCollections/Giaotrinh/DinhNhatMinh/LuanVanDinhNhatMinh_' + leafStr.replace(re, imgStr) + '.jpg';
+            var url = BookImages[index];
+            return url;
+        }
+
+        // Return which side, left or right, that a given page should be displayed on
+        br.getPageSide = function (index) {
+            if (0 == (index & 0x1)) {
+                return 'R';
+            } else {
+                return 'L';
+            }
+        }
+
+        // This function returns the left and right indices for the user-visible
+        // spread that contains the given index.  The return values may be
+        // null if there is no facing page or the index is invalid.
+        br.getSpreadIndices = function (pindex) {
+            var spreadIndices = [null, null];
+            if ('rl' == this.pageProgression) {
+                // Right to Left
+                if (this.getPageSide(pindex) == 'R') {
+                    spreadIndices[1] = pindex;
+                    spreadIndices[0] = pindex + 1;
+                } else {
+                    // Given index was LHS
+                    spreadIndices[0] = pindex;
+                    spreadIndices[1] = pindex - 1;
+                }
+            } else {
+                // Left to right
+                if (this.getPageSide(pindex) == 'L') {
+                    spreadIndices[0] = pindex;
+                    spreadIndices[1] = pindex + 1;
+                } else {
+                    // Given index was RHS
+                    spreadIndices[1] = pindex;
+                    spreadIndices[0] = pindex - 1;
+                }
+            }
+
+            return spreadIndices;
+        }
+
+        // For a given "accessible page index" return the page number in the book.
+        //
+        // For example, index 5 might correspond to "Page 1" if there is front matter such
+        // as a title page and table of contents.
+        br.getPageNum = function (index) {
+            return index + 1;
+        }
+
+        // Total number of leafs
+        br.numLeafs = BookImages.length;
+
+        // Book title and the URL used for the book title link
+        br.bookTitle =''; //'Open Library BookReader Presentation';
+        br.bookUrl ='';//'http://openlibrary.org';
+
+        // Override the path used to find UI images
+        br.imagesBaseURL = '../BookReader/images/';
+
+        br.getEmbedCode = function (frameWidth, frameHeight, viewParams) 
+        {
+            return "Embed code not supported in bookreader demo.";
+        }
+
+        // Let's go!
+        br.init();
+
+        // read-aloud and search need backend compenents and are not supported in the demo
+        $('#BRtoolbar').find('.read').hide();
+        $('#textSrch').hide();
+        $('#btnSrch').hide();
+    
+    </script>
+
+</body>
+</html>
