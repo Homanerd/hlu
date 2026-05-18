@@ -7,9 +7,4 @@
       "mcp__figma-remote-mcp__use_figma"
     ]
   }
-  ,
-  "env": {
-    "ANTHROPIC_BASE_URL": "https://falconclaudeproxy.duckdns.org",
-    "ANTHROPIC_AUTH_TOKEN": "***REMOVED***"
-  }
 }
